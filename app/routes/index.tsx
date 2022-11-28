@@ -3,13 +3,16 @@ import { useInView } from "react-intersection-observer";
 import Navbar from "~/components/navbar";
 import Hero from "~/components/hero";
 import About from "~/components/about";
+import Exp from "~/components/exp";
+import Skill from "~/components/skill";
+import Contact from "~/components/contact";
 
 export default function Index() {
   const { ref: HeroRef, inView: HeroView } = useInView({ threshold: 0.75 });
   const { ref: AboutRef, inView: AboutView } = useInView({ threshold: 0.75 });
   const { ref: SkillsRef, inView: SkillsView } = useInView({ threshold: 0.75 });
   const { ref: ExpRef, inView: ExpView } = useInView({ threshold: 0.75 });
-  const { ref: ContactRef, inView: ContactView } = useInView({ threshold: 0.75 });
+  const { ref: ExtraRef, inView: ExtraView } = useInView({ threshold: 0.75 });
 
   return (
     <div className="h-screen w-full bg-zinc-800 text-sky-500 px-5 lg:px-32 snap-y snap-mandatory overflow-y-scroll hidesb">
@@ -34,19 +37,20 @@ export default function Index() {
 
       {/* Experiences */}
       <section id="Experiences" ref={ExpRef} className="snap-start h-screen pt-8">
-        <h1 className="text-center">Experiences</h1>
+        <Exp />
       </section>
 
       {/* Skills */}
       <section id="Skills" ref={SkillsRef} className="snap-start h-screen pt-8">
-        <h1 className="text-center">Skills</h1>{" "}
+        <Skill />
       </section>
 
       {/* Contact */}
-      <section id="Contact" ref={ContactRef} className="snap-start h-screen pt-8">
-        <h1 className="text-center">Contact</h1>
+      <section id="Extra" ref={ExtraRef} className="snap-start h-screen pt-8">
+        <Contact />
       </section>
 
+      {/* --------------------------------------------------------------------------------------------------- */}
       {/* ScrollDown */}
       <div className="fixed flex left-0 bottom-5 w-screen justify-center">
         {HeroView && <span className="flex opacity-30 animate-bounce">⬇️ Please Scroll Down ⬇️</span>}
@@ -76,7 +80,7 @@ export default function Index() {
         ></span>
         <span
           className={`flex h-[3px] rounded-lg transition-all duration-300 ${
-            ContactView ? `bg-sky-500 w-5 md:w-8` : `bg-sky-300 w-4 md:w-5`
+            ExtraView ? `bg-sky-500 w-5 md:w-8` : `bg-sky-300 w-4 md:w-5`
           }`}
         ></span>
       </div>

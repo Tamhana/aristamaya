@@ -10,8 +10,8 @@ interface Iprops {
 
 export default function Educard({ logo, tahun, fakultas, jurusan, ipk }: Iprops) {
   return (
-    <div className="snap-center flex flex-wrap flex-shrink-0  w-[250px] h-52 md:h-72 bg-sky-500 rounded-[4px] text-zinc-200 overflow-hidden">
-      <div className="flex items-end pl-2 pb-2 w-full h-2/5 bg-sky-700">
+    <div className="snap-center flex flex-wrap flex-shrink-0  w-[250px] h-48 md:h-60 bg-sky-500 rounded-[4px] text-zinc-300 overflow-hidden group">
+      <div className="flex items-end pl-2 pb-2 w-full h-1/2 bg-sky-700">
         <div className="flex w-56 overflow-hidden">
           <motion.img
             initial={{ x: 200, opacity: 0 }}
@@ -22,11 +22,13 @@ export default function Educard({ logo, tahun, fakultas, jurusan, ipk }: Iprops)
           />
         </div>
       </div>
-      <div className="flex flex-col h-3/5 w-full items-center justify-evenly p-3">
-        <h1 className="text-xl">{tahun}</h1>
-        <h1 className="text-xl">{fakultas}</h1>
-        <h1 className="text-xl">{jurusan}</h1>
-        <h1 className="text-xl">{ipk}</h1>
+      <div className="relative flex flex-col h-1/2 w-full items-center justify-evenly p-3">
+        <h1 className="absolute right-3 -top-4 text-lg font-semibold p-1 leading-none rounded-[4px] bg-zinc-800 shadow-md">
+          {ipk}
+        </h1>
+        <h1 className="text-md font-semibold">{tahun}</h1>
+        <h1 className="text-md font-semibold">{fakultas}</h1>
+        <h1 className="text-md font-semibold">{jurusan}</h1>
       </div>
     </div>
   );

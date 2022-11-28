@@ -3,7 +3,7 @@ import React from "react";
 export default function Contact() {
   return (
     <div>
-      <h1 className="text-center">Contact</h1>
+      <h1 className="tracking-[10px] text-center text-lg">Extra</h1>
     </div>
   );
 }

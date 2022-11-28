@@ -6,6 +6,7 @@ import About from "~/components/about";
 import Exp from "~/components/exp";
 import Skill from "~/components/skill";
 import Contact from "~/components/contact";
+import Sidebar from "~/components/sidebar";
 
 export default function Index() {
   const { ref: HeroRef, inView: HeroView } = useInView({ threshold: 0.75 });
@@ -21,6 +22,7 @@ export default function Index() {
 
       {/* Hero */}
       <motion.section
+        id="Home"
         ref={HeroRef}
         className="snap-start h-screen w-full text-center pt-8"
         initial={{ opacity: 0 }}
@@ -52,38 +54,12 @@ export default function Index() {
 
       {/* --------------------------------------------------------------------------------------------------- */}
       {/* ScrollDown */}
-      <div className="fixed flex left-0 bottom-5 w-screen justify-center">
+      <div className="fixed flex left-0 bottom-9 w-screen justify-center">
         {HeroView && <span className="flex opacity-30 animate-bounce">⬇️ Please Scroll Down ⬇️</span>}
       </div>
 
-      {/* Scroll */}
-      <div className="fixed flex flex-col left-1 top-1/2 -translate-y-1/2 gap-3">
-        <span
-          className={`flex h-[3px] rounded-lg transition-all duration-300 ${
-            HeroView ? `bg-sky-500 w-5 md:w-8` : `bg-sky-300 w-4 md:w-5`
-          }`}
-        ></span>
-        <span
-          className={`flex h-[3px] rounded-lg transition-all duration-300 ${
-            AboutView ? `bg-sky-500 w-5 md:w-8` : `bg-sky-300 w-4 md:w-5`
-          }`}
-        ></span>
-        <span
-          className={`flex h-[3px] rounded-lg transition-all duration-300 ${
-            ExpView ? `bg-sky-500 w-5 md:w-8` : `bg-sky-300 w-4 md:w-5`
-          }`}
-        ></span>
-        <span
-          className={`flex h-[3px] rounded-lg transition-all duration-300 ${
-            SkillsView ? `bg-sky-500 w-5 md:w-8` : `bg-sky-300 w-4 md:w-5`
-          }`}
-        ></span>
-        <span
-          className={`flex h-[3px] rounded-lg transition-all duration-300 ${
-            ExtraView ? `bg-sky-500 w-5 md:w-8` : `bg-sky-300 w-4 md:w-5`
-          }`}
-        ></span>
-      </div>
+      {/* SideBar */}
+      <Sidebar heroView={HeroView} aboutView={AboutView} expView={ExpView} skillsView={SkillsView} extraView={ExtraView} />
     </div>
   );
 }

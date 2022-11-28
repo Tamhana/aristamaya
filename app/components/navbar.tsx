@@ -1,44 +1,29 @@
 import { Link } from "@remix-run/react";
 import { motion } from "framer-motion";
-import { SocialIcon } from "react-social-icons";
+import { AiFillYoutube, AiFillInstagram, AiFillFacebook, AiFillTwitterSquare } from "react-icons/ai";
+import { FaSlideshare } from "react-icons/fa";
 
 export default function Navbar() {
   return (
     <nav className="sticky z-[99] top-0 flex py-1 max-w-6xl items-center justify-between">
       <motion.div
-        className="flex flex-row items-center text-sm"
+        className="flex flex-row items-center text-sm gap-3"
         initial={{ x: "-500", opacity: 0, scale: 0.2 }}
         animate={{ x: 0, opacity: 1, scale: 1 }}
         transition={{ duration: 2, type: "spring", bounce: 0.3 }}
       >
-        <SocialIcon
-          target="_blank"
-          url="https://www.youtube.com/@ristamhana/"
-          bgColor="transparent"
-          fgColor="rgb(14 165 233)"
-          style={{ height: 30, width: 30 }}
-        />
-        <SocialIcon
-          target="_blank"
-          url="https://www.instagram.com/ristamhana"
-          bgColor="transparent"
-          fgColor="rgb(14 165 233)"
-          style={{ height: 30, width: 30 }}
-        />
-        <SocialIcon
-          target="_blank"
-          url="https://www.facebook.com/"
-          bgColor="transparent"
-          fgColor="rgb(14 165 233)"
-          style={{ height: 30, width: 30 }}
-        />
-        <SocialIcon
-          target="_blank"
-          url="https://www.twiter.com/"
-          bgColor="transparent"
-          fgColor="rgb(14 165 233)"
-          style={{ height: 30, width: 30 }}
-        />
+        <a href="https://www.youtube.com/@ristamhana/" target="_blank" className="text-2xl">
+          <AiFillYoutube />
+        </a>
+        <a href="https://www.instagram.com/ristamhana" target="_blank" className="text-2xl">
+          <AiFillInstagram />
+        </a>
+        <a href="https://www.facebook.com/" target="_blank" className="text-2xl">
+          <AiFillFacebook />
+        </a>
+        <a href="https://www.twiter.com/" target="_blank" className="text-2xl">
+          <AiFillTwitterSquare />
+        </a>
       </motion.div>
 
       <motion.div
@@ -48,8 +33,8 @@ export default function Navbar() {
         transition={{ delay: 0.3, duration: 2, type: "spring", bounce: 0.3 }}
         style={{ height: 30, width: 30 }}
       >
-        <Link to="#Extra" className="text-xs font-semibold">
-          Extra
+        <Link to="#Extra" className="text-2xl">
+          <FaSlideshare />
         </Link>
       </motion.div>
     </nav>

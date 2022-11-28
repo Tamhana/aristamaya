@@ -21,7 +21,7 @@ export default function About() {
 
         <div className="">
           <h1 className="text-lg md:text-2xl font-semibold tracking-[4px] md:tracking-[6px]">ARISTA MELIANA,Se</h1>
-          <p className="text-xs md:text-lg">
+          <p className="text-xs md:text-base">
             “You have to understand accounting and you have to understand the nuances of accounting. It’s the language of
             business and it’s an imperfect language, but unless you are willing to put in the effort to learn accounting, how to
             read and interpret financial statements. you really shouldn't select stocks yourself.”
@@ -30,12 +30,12 @@ export default function About() {
         </div>
       </div>
 
-      <h1 className="text-center tracking-[7px] mt-7 md:mt-4">Education</h1>
+      <h1 className="text-center tracking-[7px] mt-4">Education</h1>
 
-      <div className="relative flex h-64 md:h-80 items-center justify-evenly">
-        <div className="flex space-x-5 snap-x snap-mandatory overflow-x-scroll overflow-y-hidden p-3">
+      <div className="relative flex h-fit justify-evenly">
+        <div className="flex space-x-8 snap-x snap-mandatory overflow-x-scroll overflow-y-hidden px-2 py-1">
           <Educard logo={univ} tahun="2009 - 2013" fakultas="Program Studi" jurusan="S1 Akuntasnsi" ipk="IPK 3.35" />
-          <Educard logo={smk} tahun="2006 - 2009" jurusan="Akuntasnsi" />
+          <Educard logo={smk} tahun="2006 - 2009" fakultas="Program Keahlian" jurusan="Akuntasnsi" />
           <Educard logo={smp} tahun="2003 - 2006" />
         </div>
       </div>

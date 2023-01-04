@@ -14,9 +14,8 @@ interface Iprops {
 export default function Sidebar({ heroView, aboutView, expView, skillsView, extraView }: Iprops) {
   return (
     <div
-      className="z-[99] fixed w-fit h-fit text-zinc-300 text-2xl border border-zinc-700 items-center rounded-full
-      flex bottom-1 left-1/2 -translate-x-1/2 px-3 py-1 gap-3 
-      md:flex-col md:left-1 md:top-1/2 md:translate-x-0 md:-translate-y-1/2 md:px-1 md:py-2"
+      className="z-[99] fixed w-fit h-fit text-zinc-300 text-2xl border border-zinc-700 rounded-full  gap-2
+      flex bottom-1 left-1/2 -translate-x-1/2 px-3 py-1 md:flex-col md:left-1 md:top-1/2 md:translate-x-0 md:-translate-y-1/2 md:px-1 md:py-2"
     >
       <Link
         to="#Home"

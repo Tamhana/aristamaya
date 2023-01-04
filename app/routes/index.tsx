@@ -54,9 +54,11 @@ export default function Index() {
 
       {/* --------------------------------------------------------------------------------------------------- */}
       {/* ScrollDown */}
-      <div className="fixed flex left-0 bottom-9 w-screen justify-center">
-        {HeroView && <span className="flex opacity-30 animate-bounce">⬇️ Please Scroll Down ⬇️</span>}
-      </div>
+      {HeroView && (
+        <div className="fixed flex left-0 bottom-9 w-screen justify-center">
+          <span className="flex opacity-30 animate-bounce">⬇️ Please Scroll Down ⬇️</span>
+        </div>
+      )}
 
       {/* SideBar */}
       <Sidebar heroView={HeroView} aboutView={AboutView} expView={ExpView} skillsView={SkillsView} extraView={ExtraView} />

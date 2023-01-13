@@ -2,9 +2,9 @@ import Expcard from "./expcard";
 
 export default function Exp() {
   return (
-    <div className="relative h-full overflow-hidden">
+    <div className="relative flex flex-col h-full w-full pb-10 overflow-hidden">
       <h1 className="tracking-[10px] text-center text-lg mb-10">Experiences</h1>
-      <div className="flex flex-row snap-x snap-mandatory overflow-x-scroll py-3 gap-14 md:mx-44 px-10">
+      <div className="flex h-full w-full flex-col snap-y snap-mandatory overflow-y-scroll gap-14 hidesb">
         <Expcard
           pt="PT. Andalas Mitra Global"
           period="November 2021 - Sekarang"

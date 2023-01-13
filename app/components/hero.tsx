@@ -22,7 +22,8 @@ export default function Hero() {
 
   return (
     <div>
-      <h1 className="md:text-2xl text-xl mt-20 mb-5 md:tracking-[2px]">Hi, please take a look around</h1>
+      <h1 className="md:text-2xl text-xl mt-20 md:tracking-[2px]">Hey There, I'm Arista Meliana</h1>
+      <h1 className="md:text-2xl text-xl mb-5 md:tracking-[2px]">Please take a look around</h1>
       <div className="flex-shrink-0 h-32 w-32 rounded-full mx-auto overflow-hidden my-5 md:my-16">
         <img src={foto} alt="Rista's Foto" className="object-cover" />
       </div>

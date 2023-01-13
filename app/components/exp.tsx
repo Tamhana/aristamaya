@@ -4,7 +4,7 @@ export default function Exp() {
   return (
     <div className="relative flex flex-col h-full w-full pb-10 overflow-hidden">
       <h1 className="tracking-[10px] text-center text-lg mb-10">Experiences</h1>
-      <div className="flex h-full w-full flex-col snap-y snap-mandatory overflow-y-scroll gap-14 hidesb">
+      <div className="flex h-full w-full flex-col snap-y snap-mandatory overflow-y-scroll gap-14">
         <Expcard
           pt="PT. Andalas Mitra Global"
           period="November 2021 - Sekarang"
